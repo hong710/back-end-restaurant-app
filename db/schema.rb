@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_01_05_191756) do
     t.string "name"
   end
 
-  create_table "food", force: :cascade do |t|
+  create_table "foods", force: :cascade do |t|
     t.string "name"
     t.float "price"
     t.string "image"
