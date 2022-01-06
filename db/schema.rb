@@ -14,11 +14,14 @@ ActiveRecord::Schema.define(version: 2022_01_05_191756) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.float "price"
+    t.string "category"
     t.string "image"
   end
 

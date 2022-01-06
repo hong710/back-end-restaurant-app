@@ -3,7 +3,13 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    food_items = Food.all
+    food_items.to_json
+  end
+
+  get "/order" do
+    customers = Customer.all
+    customers.to_json(include: :foods)
   end
 
 end

@@ -3,6 +3,7 @@ class CreateFood < ActiveRecord::Migration[6.1]
     create_table :foods do |t|
       t.string :name
       t.float :price
+      t.string :category
       t.string :image
     end
   end
