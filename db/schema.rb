@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_01_05_191756) do
     t.string "name"
     t.float "price"
     t.string "category"
+    t.boolean "active", default: true
     t.string "image"
   end
 
