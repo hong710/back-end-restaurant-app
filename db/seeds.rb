@@ -42,20 +42,25 @@ food18 = Food.create(name: "Seafood Padcha", price: 10.45,category:"Entree", ima
 
 
 puts "Creating customers"
-customer1 = Customer.create(name: Faker::Name.name)
-customer2 = Customer.create(name: Faker::Name.name)
-customer3 = Customer.create(name: Faker::Name.name)
-customer4 = Customer.create(name: Faker::Name.name)
-customer5 = Customer.create(name: Faker::Name.name)
-customer6 = Customer.create(name: Faker::Name.name)
+customer1 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer2 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer3 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer4 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer5 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer6 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer7 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer8 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer9 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer10 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer11 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer12 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer13 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer14 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+customer15 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.last_name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+
 
 puts "Creating orders"
-# order1 = Order.create(id: 1)
-# order2 = Order.create(id: 2)
-# order3 = Order.create(id: 3)
-# order4 = Order.create(id: 4)
-
-15.times do
+35.times do
     Order.create(
         customer_id: Customer.all.sample.id,
         food_id: Customer.all.sample.id
