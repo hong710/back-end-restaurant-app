@@ -7,6 +7,11 @@ class ApplicationController < Sinatra::Base
     food_items.to_json
   end
 
+  get "/edit" do
+    food_items = Food.all
+    food_items.to_json
+  end
+
   get "/report" do
     customers = Customer.all
     customers.to_json(include: {foods: {only: [:price]}})
@@ -39,9 +44,15 @@ class ApplicationController < Sinatra::Base
     food.to_json
   end
 
-  delete "/delete/:id" do
+  delete "/delete_food/:id" do
     food = Food.find(params[:id])
     food.destroy
+    food.to_json
+  end
+
+  delete "/delete_order/:id" do
+    food = Order.where(["food_id = ?",params[:id]])
+    food.destroy_all
     food.to_json
   end
 

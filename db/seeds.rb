@@ -60,7 +60,7 @@ customer15 = Customer.create(f_name: Faker::Name.first_name,l_name: Faker::Name.
 
 
 puts "Creating orders"
-35.times do
+100.times do
     Order.create(
         customer_id: Customer.all.sample.id,
         food_id: Customer.all.sample.id
